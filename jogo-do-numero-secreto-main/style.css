@@ -139,3 +139,21 @@ button:disabled {
         padding: 1rem
     }
 }
+
+.container__botao {
+    border-radius: 16px;
+    background: #1875E8;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.container__botao:hover {
+    transform: scale(1.05);
+}
