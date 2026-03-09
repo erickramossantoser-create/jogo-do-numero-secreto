@@ -28,6 +28,7 @@ function verificarChute(){
     let chute = document.querySelector('input').value;
 
     if(chute == numeroSecreto){
+        document.querySelector('h1').classList.add("acertou");
         exibirTextoNaTela('h1', 'Acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
         let mensagemTentativas = `Você descobriu o número secreto com ${tentativas} ${palavraTentativa}!`;
@@ -70,6 +71,7 @@ function limparCampo(){
 }
 
 function reiniciarJogo(){
+    document.querySelector('h1').classList.remove("acertou");
     document.getElementById("tentativas").innerText = "Tentativas: 1";
     numeroSecreto = gerarNumeroAleatorio();
     limparCampo();
