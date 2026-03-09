@@ -42,6 +42,7 @@ function verificarChute(){
         }
 
         tentativas++;
+        document.getElementById("tentativas").innerText = `Tentativas: ${tentativas}`;
         limparCampo();
     }
 }
@@ -69,6 +70,7 @@ function limparCampo(){
 }
 
 function reiniciarJogo(){
+    document.getElementById("tentativas").innerText = "Tentativas: 1";
     numeroSecreto = gerarNumeroAleatorio();
     limparCampo();
     tentativas = 1;
@@ -76,3 +78,11 @@ function reiniciarJogo(){
 
     document.getElementById('reiniciar').setAttribute('disabled', true);
 }
+
+document.querySelector('.container__input').addEventListener("keypress", function(event) {
+
+    if (event.key === "Enter") {
+        verificarChute();
+    }
+
+});
