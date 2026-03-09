@@ -157,3 +157,11 @@ button:disabled {
 .container__botao:hover {
     transform: scale(1.05);
 }
+
+.container__input:hover {
+    transform: scale(1.02);
+}
+
+.container__input {
+    transition: transform 0.2s ease;
+}
